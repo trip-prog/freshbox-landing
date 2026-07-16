@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshBox — доставка готового питания. Ешь вкусно. Живи легко.</title>
+  <meta name="description" content="Готовое питание с доставкой на дом по Москве и МО. Конструктор рациона, гибкая подписка, календарь питания. От 790 ₽ в день.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥗</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="FreshBox — на главную">
+        <svg class="logo__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+        </svg>
+        <span class="logo__text">Fresh<em>Box</em></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#constructor" class="nav__link">Конструктор</a>
+        <a href="#menu" class="nav__link">Меню</a>
+        <a href="#calendar" class="nav__link">Календарь</a>
+        <a href="#plans" class="nav__link">Тарифы</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+      </nav>
+      <div class="header__actions">
+        <a href="#constructor" class="btn btn--primary btn--sm">Подобрать рацион</a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero__leaves" aria-hidden="true">
+        <svg class="leaf leaf--1" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="currentColor"/></svg>
+        <svg class="leaf leaf--2" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="currentColor"/></svg>
+        <svg class="leaf leaf--3" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="currentColor"/></svg>
+        <svg class="leaf leaf--4" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" fill="currentColor"/></svg>
+      </div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <h1 class="hero__title">Ешь <span class="accent">вкусно.</span><br>Живи <span class="accent">легко.</span></h1>
+          <p class="hero__subtitle">Готовое питание с доставкой на дом по Москве и МО. Свежие рационы под вашу цель — без готовки, подсчёта калорий и лишних хлопот.</p>
+          <div class="hero__cta">
+            <a href="#constructor" class="btn btn--primary btn--lg">Подобрать рацион</a>
+            <a href="#how" class="btn btn--ghost btn--lg">Как это работает</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong>25 000+</strong><span>клиентов доверяют нам</span></li>
+            <li><strong>120+</strong><span>блюд в ротации меню</span></li>
+            <li><strong>4.9</strong><span>средняя оценка сервиса</span></li>
+          </ul>
+        </div>
+        <div class="hero__visual reveal">
+          <div class="hero__img-wrap">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=75" alt="Яркий боул со свежими овощами, авокадо и зеленью" width="900" height="900" fetchpriority="high">
+          </div>
+          <div class="hero__price-badge" aria-label="Цена от 790 рублей в день">
+            <span class="hero__price-from">от</span>
+            <span class="hero__price-value">790&nbsp;₽</span>
+            <span class="hero__price-per">в день</span>
+          </div>
+          <div class="hero__mini-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div>
+              <strong>Рацион подобран!</strong>
+              <span>1400 ккал · Баланс · 5 приёмов пищи</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <ul class="hero__features reveal">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <span>Натуральные ингредиенты</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
+            <span>Шеф-повар и диетолог</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="m16 8 4 3v5h-4"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span>Доставка ежедневно</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></svg>
+            <span>Без сахара и полуфабрикатов</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Конструктор рациона ===== -->
+    <section class="section constructor" id="constructor">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Конструктор рациона</span>
+          <h2 class="section__title">Соберите своё меню за 2 минуты</h2>
+          <p class="section__subtitle">Выберите цель и калорийность — мы посчитаем цену и подберём план. Всё пересчитывается сразу.</p>
+        </div>
+        <div class="constructor__grid reveal">
+          <div class="constructor__panel">
+            <div class="constructor__field">
+              <span class="constructor__label">Ваша цель</span>
+              <div class="chips" role="group" aria-label="Цель питания">
+                <button class="chip is-active" type="button" data-goal="lose" data-kcal="1400">Похудение</button>
+                <button class="chip" type="button" data-goal="keep" data-kcal="1800">Поддержание формы</button>
+                <button class="chip" type="button" data-goal="gain" data-kcal="2300">Набор массы</button>
+              </div>
+            </div>
+            <div class="constructor__field">
+              <div class="constructor__label-row">
+                <label class="constructor__label" for="kcal-range">Калорийность</label>
+                <output class="constructor__output" id="kcal-output" for="kcal-range">1400 ккал</output>
+              </div>
+              <input type="range" id="kcal-range" min="1000" max="2500" step="50" value="1400" aria-label="Калорийность рациона в килокалориях">
+              <div class="range-scale" aria-hidden="true"><span>1000</span><span>2500 ккал</span></div>
+            </div>
+            <div class="constructor__field">
+              <span class="constructor__label">Приёмов пищи в день</span>
+              <div class="chips" role="group" aria-label="Количество приёмов пищи">
+                <button class="chip" type="button" data-meals="3">3</button>
+                <button class="chip is-active" type="button" data-meals="4">4</button>
+                <button class="chip" type="button" data-meals="5">5</button>
+              </div>
+            </div>
+            <div class="constructor__field">
+              <span class="constructor__label">Длительность</span>
+              <div class="chips" role="group" aria-label="Длительность подписки">
+                <button class="chip is-active" type="button" data-days="5">5 дней</button>
+                <button class="chip" type="button" data-days="7">7 дней <em>−5%</em></button>
+                <button class="chip" type="button" data-days="14">14 дней <em>−10%</em></button>
+                <button class="chip" type="button" data-days="28">28 дней <em>−15%</em></button>
+              </div>
+            </div>
+          </div>
+          <aside class="constructor__summary" aria-live="polite">
+            <div class="summary__plan">
+              <span class="summary__plan-label">Ваш рацион</span>
+              <strong class="summary__plan-name" id="sum-plan">Fit</strong>
+            </div>
+            <ul class="summary__list">
+              <li><span>Калорийность</span><strong id="sum-kcal">1400 ккал</strong></li>
+              <li><span>Приёмов пищи</span><strong id="sum-meals">4 в день</strong></li>
+              <li><span>Цена за день</span><strong id="sum-day-price">990 ₽</strong></li>
+              <li><span>Длительность</span><strong id="sum-days">5 дней</strong></li>
+              <li class="summary__discount" id="sum-discount-row" hidden><span>Скидка</span><strong id="sum-discount">−5%</strong></li>
+            </ul>
+            <div class="summary__total">
+              <span>Итого</span>
+              <strong id="sum-total">4 950 ₽</strong>
+            </div>
+            <button class="btn btn--primary btn--block" type="button" data-open-checkout>Оформить подписку</button>
+            <a href="#menu" class="summary__menu-link">Смотреть меню →</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Как это работает ===== -->
+    <section class="section how" id="how">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Как это работает</span>
+          <h2 class="section__title">Четыре шага до готового рациона</h2>
+        </div>
+        <ol class="how__grid reveal">
+          <li class="how__step">
+            <span class="how__num">01</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <h3>Выберите цель и калорийность</h3>
+            <p>В конструкторе за пару минут — без анкет и звонков менеджера.</p>
+          </li>
+          <li class="how__step">
+            <span class="how__num">02</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            <h3>Мы готовим меню</h3>
+            <p>Диетолог составляет план, шеф-повар готовит из свежих продуктов.</p>
+          </li>
+          <li class="how__step">
+            <span class="how__num">03</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="m16 8 4 3v5h-4"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <h3>Доставляем ежедневно</h3>
+            <p>Утром или вечером — в удобный вам интервал, точно в срок.</p>
+          </li>
+          <li class="how__step">
+            <span class="how__num">04</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8m-4-4v4M17 4h3a1 1 0 0 1 1 1v2a4 4 0 0 1-4 4M7 4H4a1 1 0 0 0-1 1v2a4 4 0 0 0 4 4m10-7v5a5 5 0 0 1-10 0V4z"/></svg>
+            <h3>Вы достигаете цели</h3>
+            <p>Едите вкусно, видите прогресс и не тратите время на готовку.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Меню дня ===== -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Меню</span>
+          <h2 class="section__title">Пример меню на день</h2>
+          <p class="section__subtitle">Блюда меняются каждый день — 120+ позиций в ротации, ничего не повторяется чаще раза в две недели.</p>
+        </div>
+        <div class="tabs reveal" role="tablist" aria-label="Приёмы пищи">
+          <button class="tab is-active" role="tab" aria-selected="true" aria-controls="tab-breakfast" id="tabbtn-breakfast" data-tab="breakfast">Завтраки</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-lunch" id="tabbtn-lunch" data-tab="lunch">Обеды</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-dinner" id="tabbtn-dinner" data-tab="dinner">Ужины</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-snack" id="tabbtn-snack" data-tab="snack">Перекусы</button>
+        </div>
+        <div class="menu__panels reveal">
+          <div class="menu__grid is-active" role="tabpanel" id="tab-breakfast" aria-labelledby="tabbtn-breakfast"></div>
+          <div class="menu__grid" role="tabpanel" id="tab-lunch" aria-labelledby="tabbtn-lunch" hidden></div>
+          <div class="menu__grid" role="tabpanel" id="tab-dinner" aria-labelledby="tabbtn-dinner" hidden></div>
+          <div class="menu__grid" role="tabpanel" id="tab-snack" aria-labelledby="tabbtn-snack" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Календарь питания ===== -->
+    <section class="section calendar" id="calendar">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Календарь питания</span>
+          <h2 class="section__title">Планируй. Ешь. Достигай.</h2>
+          <p class="section__subtitle">Выберите день — покажем меню. Уезжаете? Пропустите день в один клик, деньги вернутся на баланс.</p>
+        </div>
+        <div class="calendar__grid reveal">
+          <div class="calendar__widget">
+            <div class="calendar__head">
+              <strong id="cal-month">Июль 2026</strong>
+              <span class="calendar__hint">кликните на день</span>
+            </div>
+            <div class="calendar__weekdays" aria-hidden="true">
+              <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+            </div>
+            <div class="calendar__days" id="cal-days"></div>
+          </div>
+          <div class="calendar__detail" id="cal-detail" aria-live="polite">
+            <!-- заполняется скриптом -->
+          </div>
+        </div>
+        <ul class="calendar__perks reveal">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <span>Гибкая подписка от 1 дня</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg>
+            <span>Можно пропускать дни</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            <span>Замена блюд без доплаты</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span>Доставка точно в срок</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Тарифы ===== -->
+    <section class="section plans" id="plans">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Тарифы</span>
+          <h2 class="section__title">Выбери свой план</h2>
+        </div>
+        <div class="plans__grid reveal">
+          <article class="plan">
+            <h3 class="plan__name">Balance</h3>
+            <p class="plan__kcal">1200–1600 ккал</p>
+            <p class="plan__desc">Для мягкого снижения веса и поддержания формы</p>
+            <p class="plan__price">от <strong>790 ₽</strong> / день</p>
+            <ul class="plan__features">
+              <li>4 приёма пищи</li>
+              <li>Баланс БЖУ 30/30/40</li>
+              <li>Без сахара и жарки</li>
+            </ul>
+            <button class="btn btn--ghost btn--block" type="button" data-plan-kcal="1400" data-plan-meals="4">Выбрать план</button>
+          </article>
+          <article class="plan plan--popular">
+            <span class="plan__badge">Популярный</span>
+            <h3 class="plan__name">Fit</h3>
+            <p class="plan__kcal">1500–2000 ккал</p>
+            <p class="plan__desc">Для активного образа жизни и регулярных тренировок</p>
+            <p class="plan__price">от <strong>990 ₽</strong> / день</p>
+            <ul class="plan__features">
+              <li>5 приёмов пищи</li>
+              <li>Повышенный белок</li>
+              <li>Перекусы и смузи</li>
+            </ul>
+            <button class="btn btn--primary btn--block" type="button" data-plan-kcal="1800" data-plan-meals="5">Выбрать план</button>
+          </article>
+          <article class="plan">
+            <h3 class="plan__name">Power</h3>
+            <p class="plan__kcal">2000–2500 ккал</p>
+            <p class="plan__desc">Для набора мышечной массы и серьёзных нагрузок</p>
+            <p class="plan__price">от <strong>1090 ₽</strong> / день</p>
+            <ul class="plan__features">
+              <li>5 приёмов пищи</li>
+              <li>2 г белка на кг веса</li>
+              <li>Двойные порции гарниров</li>
+            </ul>
+            <button class="btn btn--ghost btn--block" type="button" data-plan-kcal="2300" data-plan-meals="5">Выбрать план</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Отзывы ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Отзывы</span>
+          <h2 class="section__title">Что говорят клиенты</h2>
+        </div>
+        <div class="reviews__grid reveal">
+          <figure class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <blockquote>За два месяца минус 6 кг без чувства голода. Больше всего радует, что не надо думать, что готовить — открыл контейнер и поел.</blockquote>
+            <figcaption>
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=70" alt="" width="48" height="48" loading="lazy">
+              <div><strong>Анна К.</strong><span>план Balance, 2 месяца</span></div>
+            </figcaption>
+          </figure>
+          <figure class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <blockquote>Тренируюсь 4 раза в неделю, белка хватает с запасом. Удобно, что можно пропустить день, когда уезжаю в командировку.</blockquote>
+            <figcaption>
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&q=70" alt="" width="48" height="48" loading="lazy">
+              <div><strong>Дмитрий С.</strong><span>план Power, 5 месяцев</span></div>
+            </figcaption>
+          </figure>
+          <figure class="review">
+            <div class="review__stars" aria-label="Оценка 5 из 5">★★★★★</div>
+            <blockquote>Заказываем с мужем два разных рациона, привозят одной доставкой. Вкусно, разнообразно, календарь в приложении очень удобный.</blockquote>
+            <figcaption>
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=96&q=70" alt="" width="48" height="48" loading="lazy">
+              <div><strong>Мария В.</strong><span>план Fit, 3 месяца</span></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="section__tag">FAQ</span>
+          <h2 class="section__title">Частые вопросы</h2>
+        </div>
+        <div class="faq__list reveal">
+          <details class="faq__item">
+            <summary>Как хранить и разогревать блюда?</summary>
+            <p>Все блюда приезжают охлаждёнными в герметичных контейнерах. Храните в холодильнике до 48 часов, разогревайте в микроволновке 2–3 минуты прямо в контейнере — он для этого предназначен.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Можно ли заменить блюдо, которое не нравится?</summary>
+            <p>Да, бесплатно. В личном кабинете до 20:00 накануне доставки можно заменить любое блюдо на альтернативу из меню дня.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Что делать, если я уезжаю на несколько дней?</summary>
+            <p>Пропустите дни в календаре питания — стоимость этих дней вернётся на баланс и продлит подписку. Пропускать можно неограниченно, главное — до 20:00 накануне.</p>
+          </details>
+          <details class="faq__item">
+            <summary>В какое время привозят еду?</summary>
+            <p>Ежедневно в двух интервалах на выбор: утром с 6:00 до 9:00 или вечером с 19:00 до 23:00 накануне. Курьер предупредит за 30 минут.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Есть ли меню без глютена или лактозы?</summary>
+            <p>Да, при оформлении подписки укажите ограничения — диетолог адаптирует рацион. Исключаем глютен, лактозу, орехи, морепродукты и ещё 12 групп продуктов.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section cta">
+      <div class="container">
+        <div class="cta__card reveal">
+          <div class="cta__content">
+            <h2>Начните питаться правильно уже завтра</h2>
+            <p>Первый заказ — со скидкой 10%. Доставим утром к завтраку.</p>
+          </div>
+          <button class="btn btn--light btn--lg" type="button" data-open-checkout>Оформить подписку</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="logo" aria-label="FreshBox">
+          <svg class="logo__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+          </svg>
+          <span class="logo__text">Fresh<em>Box</em></span>
+        </a>
+        <p>Доставка готового питания по Москве и МО. Ешь вкусно — живи легко.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="#constructor">Конструктор</a>
+        <a href="#menu">Меню</a>
+        <a href="#calendar">Календарь</a>
+        <a href="#plans">Тарифы</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="footer__contacts">
+        <a href="tel:+74950000000">+7 (495) 000-00-00</a>
+        <a href="mailto:hello@freshbox.example">hello@freshbox.example</a>
+        <span>Ежедневно 6:00–23:00</span>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 FreshBox. Демо-лендинг для портфолио.</span>
+    </div>
+  </footer>
+
+  <!-- ===== Checkout modal ===== -->
+  <div class="modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" hidden>
+    <div class="modal__backdrop" data-close-checkout></div>
+    <div class="modal__card">
+      <button class="modal__close" type="button" data-close-checkout aria-label="Закрыть">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal__body" id="checkout-form-view">
+        <h3 id="checkout-title">Оформление подписки</h3>
+        <div class="modal__summary" id="checkout-summary">
+          <!-- заполняется скриптом -->
+        </div>
+        <form id="checkout-form" novalidate>
+          <div class="form__field">
+            <label for="f-name">Ваше имя</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Анна" required>
+            <span class="form__error" id="err-name" role="alert" hidden>Укажите имя</span>
+          </div>
+          <div class="form__field">
+            <label for="f-phone">Телефон</label>
+            <input type="tel" id="f-phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required>
+            <span class="form__error" id="err-phone" role="alert" hidden>Укажите телефон в формате +7 (XXX) XXX-XX-XX</span>
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">Подтвердить заказ</button>
+          <p class="form__note">Демо-форма: заявка никуда не отправляется. Нажимая кнопку, вы соглашаетесь с условиями сервиса.</p>
+        </form>
+      </div>
+      <div class="modal__body modal__success" id="checkout-success-view" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>
+        <h3>Заказ принят!</h3>
+        <p>Менеджер свяжется с вами в течение 15 минут, чтобы подтвердить адрес и время первой доставки.</p>
+        <button class="btn btn--primary" type="button" data-close-checkout>Отлично</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
